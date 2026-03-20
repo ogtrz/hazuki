@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Hazuki</string>
+    <string name="app_version">0.1.0-alpha</string>
+
+    <!-- Screen titles -->
+    <string name="label_library">Library</string>
+    <string name="label_history">History</string>
+    <string name="label_browse">Browse</string>
+    <string name="label_more">More</string>
+</resources>
