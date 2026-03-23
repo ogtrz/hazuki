@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
@@ -44,7 +45,9 @@ class MainActivity : ComponentActivity() {
                             }
                         }) { padding ->
                         Box(
-                            modifier = Modifier.padding(padding).consumeWindowInsets(padding)
+                            modifier = Modifier
+                                .padding(padding)
+                                .consumeWindowInsets(padding)
                         ) {
                             CurrentTab()
                         }
@@ -59,11 +62,9 @@ class MainActivity : ComponentActivity() {
 private fun RowScope.TabNavigationItem(tab: Tab) {
     val tabNavigator = LocalTabNavigator.current
 
-    NavigationBarItem(
-        selected = tabNavigator.current == tab,
-        onClick = { tabNavigator.current = tab },
-        label = { Text(tab.options.title) },
-        icon = {
-            Icon(painter = tab.options.icon!!, contentDescription = tab.options.title)
-        })
+    NavigationBarItem(selected = tabNavigator.current == tab, onClick = {
+        tabNavigator.current = tab
+    }, label = { Text(tab.options.title) }, icon = {
+        Icon(painter = tab.options.icon!!, contentDescription = tab.options.title)
+    })
 }
