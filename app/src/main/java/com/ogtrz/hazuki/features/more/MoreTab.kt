@@ -32,21 +32,6 @@ object MoreTab : Tab {
 
     @Composable
     override fun Content() {
-        Scaffold { padding ->
-            Column(
-                modifier = Modifier.Companion
-                    .padding(padding)
-                    .fillMaxWidth(),
-                horizontalAlignment = Alignment.Companion.CenterHorizontally
-            ) {
-                val name = stringResource(R.string.app_name)
-                val version = stringResource(R.string.app_version)
-                Text(
-                    text = "$name v$version",
-                    modifier = Modifier.Companion.padding(vertical = 24.dp)
-                )
-            }
-        }
-
+        MoreContent()
     }
 }
