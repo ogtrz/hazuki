@@ -21,7 +21,7 @@ object LibraryTab : Tab {
     override val options: TabOptions
         @Composable get() {
             val icon =
-                rememberVectorPainter(ImageVector.Companion.vectorResource(R.drawable.library))
+                rememberVectorPainter(ImageVector.vectorResource(R.drawable.library))
             val title = stringResource(R.string.label_library)
             return remember {
                 TabOptions(index = 0u, title = title, icon = icon)
@@ -32,7 +32,7 @@ object LibraryTab : Tab {
     @Composable
     override fun Content() {
         Scaffold(topBar = { TopAppBar(title = { Text(stringResource(R.string.label_library)) }) }) { padding ->
-            Box(Modifier.Companion.padding(padding)) {}
+            Box(Modifier.padding(padding)) {}
         }
     }
 }

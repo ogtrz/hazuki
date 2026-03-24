@@ -22,7 +22,7 @@ object BrowseTab : Tab {
         @Composable
         get() {
             val icon =
-                rememberVectorPainter(ImageVector.Companion.vectorResource(R.drawable.browse))
+                rememberVectorPainter(ImageVector.vectorResource(R.drawable.browse))
             val title = stringResource(R.string.label_browse)
 
             return remember {
@@ -34,7 +34,7 @@ object BrowseTab : Tab {
     @Composable
     override fun Content() {
         Scaffold(topBar = { TopAppBar(title = { Text("Browse") }) }) { padding ->
-            Box(Modifier.Companion.padding(padding)) {
+            Box(Modifier.padding(padding)) {
             }
         }
     }

@@ -22,7 +22,7 @@ object HistoryTab : Tab {
         @Composable
         get() {
             val icon =
-                rememberVectorPainter(ImageVector.Companion.vectorResource(R.drawable.history))
+                rememberVectorPainter(ImageVector.vectorResource(R.drawable.history))
             val title = stringResource(R.string.label_history)
 
             return remember {
@@ -34,7 +34,7 @@ object HistoryTab : Tab {
     @Composable
     override fun Content() {
         Scaffold(topBar = { TopAppBar(title = { Text("History") }) }) { padding ->
-            Box(Modifier.Companion.padding(padding)) {
+            Box(Modifier.padding(padding)) {
             }
         }
     }
