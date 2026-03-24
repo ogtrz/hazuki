@@ -21,8 +21,8 @@ fun HazukiTheme(
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
 
-        darkTheme -> HazukiColorScheme.darkScheme
-        else -> HazukiColorScheme.lightScheme
+        darkTheme -> HazukiColorScheme.getColorScheme(isDark = true)
+        else -> HazukiColorScheme.getColorScheme(isDark = false)
     }
 
     MaterialTheme(
