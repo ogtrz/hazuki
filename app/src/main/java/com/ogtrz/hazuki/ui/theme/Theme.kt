@@ -14,7 +14,7 @@ import com.ogtrz.hazuki.ui.theme.colorscheme.HazukiColorScheme
 @Composable
 fun HazukiTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    dynamicColor: Boolean = false,
+    dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
