@@ -1,7 +1,6 @@
 package com.ogtrz.hazuki.features.browse
 
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
@@ -22,7 +21,8 @@ object BrowseTab : Tab {
     override val options: TabOptions
         @Composable
         get() {
-            val icon = rememberVectorPainter(ImageVector.vectorResource(R.drawable.browse))
+            val icon =
+                rememberVectorPainter(ImageVector.Companion.vectorResource(R.drawable.browse))
             val title = stringResource(R.string.label_browse)
 
             return remember {
@@ -34,7 +34,7 @@ object BrowseTab : Tab {
     @Composable
     override fun Content() {
         Scaffold(topBar = { TopAppBar(title = { Text("Browse") }) }) { padding ->
-            Box(Modifier.padding(padding)) {
+            Box(Modifier.Companion.padding(padding)) {
             }
         }
     }

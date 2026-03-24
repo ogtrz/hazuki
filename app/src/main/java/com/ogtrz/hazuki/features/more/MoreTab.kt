@@ -22,7 +22,7 @@ object MoreTab : Tab {
     override val options: TabOptions
         @Composable
         get() {
-            val icon = rememberVectorPainter(ImageVector.vectorResource(R.drawable.more))
+            val icon = rememberVectorPainter(ImageVector.Companion.vectorResource(R.drawable.more))
             val title = stringResource(R.string.label_more)
 
             return remember {
@@ -34,16 +34,16 @@ object MoreTab : Tab {
     override fun Content() {
         Scaffold { padding ->
             Column(
-                modifier = Modifier
+                modifier = Modifier.Companion
                     .padding(padding)
                     .fillMaxWidth(),
-                horizontalAlignment = Alignment.CenterHorizontally
+                horizontalAlignment = Alignment.Companion.CenterHorizontally
             ) {
                 val name = stringResource(R.string.app_name)
                 val version = stringResource(R.string.app_version)
                 Text(
                     text = "$name v$version",
-                    modifier = Modifier.padding(vertical = 24.dp)
+                    modifier = Modifier.Companion.padding(vertical = 24.dp)
                 )
             }
         }

@@ -1,7 +1,6 @@
 package com.ogtrz.hazuki.features.history
 
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
@@ -22,7 +21,8 @@ object HistoryTab : Tab {
     override val options: TabOptions
         @Composable
         get() {
-            val icon = rememberVectorPainter(ImageVector.vectorResource(R.drawable.history))
+            val icon =
+                rememberVectorPainter(ImageVector.Companion.vectorResource(R.drawable.history))
             val title = stringResource(R.string.label_history)
 
             return remember {
@@ -34,7 +34,7 @@ object HistoryTab : Tab {
     @Composable
     override fun Content() {
         Scaffold(topBar = { TopAppBar(title = { Text("History") }) }) { padding ->
-            Box(Modifier.padding(padding)) {
+            Box(Modifier.Companion.padding(padding)) {
             }
         }
     }
