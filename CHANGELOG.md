@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Basic tab navigation system
 - Default theme
 - Dynamic splash screen
+- 'About' screen
 
 <!-- Link definitions -->
 
