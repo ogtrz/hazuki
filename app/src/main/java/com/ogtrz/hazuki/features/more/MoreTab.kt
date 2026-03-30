@@ -6,9 +6,12 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
+import cafe.adriel.voyager.navigator.LocalNavigator
+import cafe.adriel.voyager.navigator.currentOrThrow
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
 import com.ogtrz.hazuki.R
+import com.ogtrz.hazuki.features.about.AboutScreen
 
 object MoreTab : Tab {
     override val options: TabOptions
@@ -24,6 +27,9 @@ object MoreTab : Tab {
 
     @Composable
     override fun Content() {
-        MoreContent()
+        val navigator = LocalNavigator.currentOrThrow
+        MoreContent(
+            onClickAbout = { navigator.push(AboutScreen()) }
+        )
     }
 }

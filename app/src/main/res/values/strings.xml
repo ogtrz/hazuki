@@ -7,4 +7,9 @@
     <string name="label_history">History</string>
     <string name="label_browse">Browse</string>
     <string name="label_more">More</string>
+    <string name="label_about">About</string>
+
+    <!-- About section -->
+    <string name="version">Version</string>
+    <string name="website">Website</string>
 </resources>
