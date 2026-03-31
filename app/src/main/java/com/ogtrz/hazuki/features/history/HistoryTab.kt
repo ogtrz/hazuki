@@ -22,7 +22,7 @@ object HistoryTab : Tab {
         @Composable
         get() {
             val icon =
-                rememberVectorPainter(ImageVector.vectorResource(R.drawable.history))
+                rememberVectorPainter(ImageVector.vectorResource(R.drawable.ic_history))
             val title = stringResource(R.string.label_history)
 
             return remember {

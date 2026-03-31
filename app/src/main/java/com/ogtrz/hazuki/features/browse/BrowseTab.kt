@@ -22,7 +22,7 @@ object BrowseTab : Tab {
         @Composable
         get() {
             val icon =
-                rememberVectorPainter(ImageVector.vectorResource(R.drawable.browse))
+                rememberVectorPainter(ImageVector.vectorResource(R.drawable.ic_browse))
             val title = stringResource(R.string.label_browse)
 
             return remember {

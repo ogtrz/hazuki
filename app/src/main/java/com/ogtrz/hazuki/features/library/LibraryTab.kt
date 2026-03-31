@@ -21,7 +21,7 @@ object LibraryTab : Tab {
     override val options: TabOptions
         @Composable get() {
             val icon =
-                rememberVectorPainter(ImageVector.vectorResource(R.drawable.library))
+                rememberVectorPainter(ImageVector.vectorResource(R.drawable.ic_library))
             val title = stringResource(R.string.label_library)
             return remember {
                 TabOptions(index = 0u, title = title, icon = icon)

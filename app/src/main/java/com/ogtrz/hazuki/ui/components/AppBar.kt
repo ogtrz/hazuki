@@ -35,7 +35,7 @@ fun AppBar(
         scrollBehavior = scrollBehavior,
         navigationIcon = {
             onNavigationIconClick?.let {
-                val icon = navigationIcon ?: ImageVector.vectorResource(R.drawable.arrow_back)
+                val icon = navigationIcon ?: ImageVector.vectorResource(R.drawable.ic_arrow_back)
 
                 IconButton(onClick = it) {
                     Icon(

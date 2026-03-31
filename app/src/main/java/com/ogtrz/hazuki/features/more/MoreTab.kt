@@ -17,7 +17,7 @@ object MoreTab : Tab {
     override val options: TabOptions
         @Composable
         get() {
-            val icon = rememberVectorPainter(ImageVector.vectorResource(R.drawable.more))
+            val icon = rememberVectorPainter(ImageVector.vectorResource(R.drawable.ic_more))
             val title = stringResource(R.string.label_more)
 
             return remember {

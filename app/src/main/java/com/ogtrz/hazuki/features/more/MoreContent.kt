@@ -39,7 +39,7 @@ fun MoreContent(
                 HorizontalDivider()
                 TextListItem(
                     title = stringResource(R.string.label_about),
-                    icon = ImageVector.vectorResource(R.drawable.info),
+                    icon = ImageVector.vectorResource(R.drawable.ic_info),
                     onClick = onClickAbout
                 )
             }
