@@ -49,9 +49,11 @@ class AboutScreen : Screen {
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         Icon(
-                            painter = painterResource(R.drawable.ic_launcher_monochrome),
+                            painter = painterResource(R.drawable.ic_hazuki),
                             contentDescription = null,
-                            modifier = Modifier.size(152.dp)
+                            modifier = Modifier
+                                .padding(vertical = 56.dp)
+                                .size(64.dp)
                         )
                     }
                 }
