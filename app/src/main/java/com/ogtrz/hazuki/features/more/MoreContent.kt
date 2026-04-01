@@ -21,12 +21,18 @@ fun MoreContent(
         LazyColumn(modifier = Modifier.padding(padding)) {
             item {
                 LogoHeader()
+            }
+            item {
                 HorizontalDivider()
+            }
+            item {
                 TextListItem(
                     title = stringResource(R.string.label_settings),
                     icon = ImageVector.vectorResource(R.drawable.ic_settings),
                     onClick = onClickSettings
                 )
+            }
+            item {
                 TextListItem(
                     title = stringResource(R.string.label_about),
                     icon = ImageVector.vectorResource(R.drawable.ic_info),
