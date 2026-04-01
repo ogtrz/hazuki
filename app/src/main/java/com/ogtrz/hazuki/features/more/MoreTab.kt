@@ -12,6 +12,7 @@ import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
 import com.ogtrz.hazuki.R
 import com.ogtrz.hazuki.features.more.about.AboutScreen
+import com.ogtrz.hazuki.features.more.settings.SettingsScreen
 
 object MoreTab : Tab {
     override val options: TabOptions
@@ -29,6 +30,7 @@ object MoreTab : Tab {
     override fun Content() {
         val navigator = LocalNavigator.currentOrThrow
         MoreContent(
+            onClickSettings = { navigator.push(SettingsScreen()) },
             onClickAbout = { navigator.push(AboutScreen()) }
         )
     }

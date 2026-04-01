@@ -14,6 +14,7 @@ import com.ogtrz.hazuki.ui.components.TextListItem
 
 @Composable
 fun MoreContent(
+    onClickSettings: () -> Unit,
     onClickAbout: () -> Unit
 ) {
     Scaffold { padding ->
@@ -21,6 +22,11 @@ fun MoreContent(
             item {
                 LogoHeader()
                 HorizontalDivider()
+                TextListItem(
+                    title = stringResource(R.string.label_settings),
+                    icon = ImageVector.vectorResource(R.drawable.ic_settings),
+                    onClick = onClickSettings
+                )
                 TextListItem(
                     title = stringResource(R.string.label_about),
                     icon = ImageVector.vectorResource(R.drawable.ic_info),
