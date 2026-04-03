@@ -1,6 +1,4 @@
-@file:OptIn(ExperimentalMaterial3Api::class)
-
-package com.ogtrz.hazuki.features.more.settings
+package com.ogtrz.hazuki.features.settings
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
@@ -16,6 +14,7 @@ import com.ogtrz.hazuki.R
 import com.ogtrz.hazuki.ui.components.AppBar
 
 class SettingsScreen : Screen {
+    @OptIn(ExperimentalMaterial3Api::class)
     @Composable
     override fun Content() {
         val navigator = LocalNavigator.currentOrThrow
@@ -30,7 +29,7 @@ class SettingsScreen : Screen {
                 )
             }
         ) { padding ->
-            Box(modifier = Modifier.padding(padding)) {
+            Box(modifier = Modifier.Companion.padding(padding)) {
             }
         }
     }

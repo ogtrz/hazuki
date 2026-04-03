@@ -12,7 +12,7 @@ import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
 import com.ogtrz.hazuki.R
 import com.ogtrz.hazuki.features.more.about.AboutScreen
-import com.ogtrz.hazuki.features.more.settings.SettingsScreen
+import com.ogtrz.hazuki.features.settings.SettingsScreen
 
 object MoreTab : Tab {
     override val options: TabOptions
